@@ -1,14 +1,35 @@
 /* variables */
 
 /* globals */
+#main_div{
+    background-color:#FAEED1 ;
+}
+
+
+
 
 /* header */
 
 header li{
     list-style: none;
+    text-transform: uppercase;
 }
 
 /* home */
+#home{
+    height: 97vh;
+    object-fit: contain;
+}
+.avatar_div{
+    height: 60%;
+    width: 40%;
+    border: lime 2px solid;
+    object-fit: contain;
+}
+
+.avatar_div img{
+    size:inherit;
+}
 
 /* about */
 

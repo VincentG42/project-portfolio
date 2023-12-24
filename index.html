@@ -1,65 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vincent Goyet - Portfolio</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
-                rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
-                crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
 
-    <header class="container-md">
-        <!--nav-->
-       <div class="row justify-content-center align-items-center">
-            <ul class="list-group list-group-horizontal justify-content-center">
-                <li clas="list-group-item">Home</li>
-                <li clas="list-group-item">about</li>
-                <li clas="list-group-item"> skills</li>
-                <li clas="list-group-item">contact</li>
-            </ul>
-            <div>
-             <button></button>
-             <button></button>
+<body class=" bg-dark container-fluid g0">
+    <div id="main_div" class="mt-4 mx-3">
+        <header class="container-fluid g-0">
+            <!--nav-->
+            <div class="row justify-content-center align-items-center m-0">
+                <div class="col-3"></div>
+                <ul class="list-group list-group-horizontal justify-content-between p-3  col-6">
+                    <li clas="list-group-item"> <a class="link-underline link-underline-opacity-0" href="#home">Home</a>
+                    </li>
+                    <li clas="list-group-item"><a class="link-underline link-underline-opacity-0"
+                            href="#about">about</a></li>
+                    <li clas="list-group-item"><a class="link-underline link-underline-opacity-0"
+                            href="#skills">skills</a></li>
+                    <li clas="list-group-item"><a class="link-underline link-underline-opacity-0"
+                            href="#contact">contact</a></li>
+                </ul>
+                <div class=" col-3 row justify-content-end">
+                    <!--effects buttons-->
+                    <button class="">dark mode</button>
+                    <button class=""> select color mode</button>
+                </div>
             </div>
-       </div>
-       <!--effects buttons-->
-    </header>
+        </header>
 
-    <!--Home-->
-    <div>
-        <div></div>
-        <div></div>
+        <!--Home-->
+        <div id="home" class="row justify-content-center align-items-center">
+            <div class="home_article col-6"><!--article-->
+                <h2 class="col-8 text-start">Lorem ipsum dolor sit.</h2>
+                <article class="col-8 text-start"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dicta maxime impedit consequuntur voluptatum, temporibus quo nam?
+                    Doloremque dicta, ex sit iste ducimus eum quia, suscipit accusantium, id modi dolores eos?
+                </article>
+            </div>
+            <div class="avatar_div col-6">
+                <img src="./img/—Pngtree—faceless boy icon illustration_7359974.png" alt="avatar" class="col-12">
+            </div>
 
+        </div>
+
+        <!--About-->
+        <div id="about">
+            <div></div>
+            <div></div>
+            <div></div>
+            <button></button>
+        </div>
+
+        <!--Skills/folio-->
+        <div id="skills">
+
+        </div>
+
+        <!--Contact-->
+        <div id="contact">
+
+        </div>
     </div>
 
-    <!--About-->
-    <div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <button></button>
-    </div>
 
-    <!--Skills/folio-->
-    <div>
-
-    </div>
-
-    <!--Contact-->
-    <div>
-
-    </div>
-
-    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
-             crossorigin="anonymous"></script>
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
+
 </html>
