@@ -26,6 +26,4 @@ darkMode.addEventListener('click', ()=>{
 
 
 
-
-
 //dark mode switch

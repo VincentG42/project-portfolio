@@ -23,7 +23,9 @@ body{
 
 h2{
     font-family: titillium web, sans-serif;
+    font-size:3.5em;
     font-weight: bolder;
+    color :var(--text_color)
 }
 
 /* header */
@@ -61,7 +63,7 @@ header svg{
     height: 60%;
     width: 40%;
     border: lime 2px solid;
-    object-fit: contain;
+    
 }
 
 .avatar_div img{
@@ -70,11 +72,38 @@ header svg{
 }
 
 #home h2{
+    font-family: Titillium Web , sans-serif;
     color:var(--text_color);
 }
-#home article{
+#home h3{
+    font-family: Titillium Web , sans-serif;
     color:var(--text_color);
 }
+#home p{
+    font-family: Montserrat, serif;
+    position: relative;
+    color:var(--text_color);
+}
+
+#home p:before{
+    position: absolute;
+    content: "";
+    height: 0.2em;
+    width: 1.5em;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(22,199,75,1) 100%);
+    left:0.8rem;
+    top:48%;
+}
+#home p:after{
+    position: absolute;
+    content: "";
+    height: 0.2em;
+    width: 1.5em;
+    background: linear-gradient(90deg, rgba(22,199,75,1) 0%, rgba(255,255,255,0) 100%);
+    right:0.8rem;
+    top:48%;
+}
+
 
 
 /* about */
