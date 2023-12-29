@@ -11,49 +11,42 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body class="container-fluid g0">
+<body class="container-fluid g0 m-0 p-0">
     <div id="main_div" class="my-4 mx-3">
-        <header class="container-fluid g-0">
-            <!--nav-->
-            <div class="row justify-content-center align-items-center m-0">
-                <div class="col-3"></div>
-                <ul class="list-group list-group-horizontal justify-content-between p-3  col-6">
-                    <li clas="list-group-item"> <a class="link-underline link-underline-opacity-0" href="#home">Home</a>
-                    </li>
-                    <li clas="list-group-item"><a class="link-underline link-underline-opacity-0"
-                            href="#about">about</a></li>
-                    <li clas="list-group-item"><a class="link-underline link-underline-opacity-0"
-                            href="#skills">skills</a></li>
-                    <li clas="list-group-item"><a class="link-underline link-underline-opacity-0"
-                            href="#contact">contact</a></li>
+        <header class="container-md g-0">
+                <ul class="pt-2">
+                    <div class="d-flex justify-content-around flex-column flex-sm-row col-12">
+                        <li clas="list-group-item navlink"><a class="link-underline link-underline-opacity-0" href="#home">Accueil</a></li>
+                        <li clas="list-group-item navlink"><a class="link-underline link-underline-opacity-0" href="#about"> A propos</a></li>
+                        <li clas="list-group-item navlink"><a class="link-underline link-underline-opacity-0" href="#skills">portfolio</a></li>
+                        <li clas="list-group-item navlink"><a class="link-underline link-underline-opacity-0" href="#contact">contact</a></li>                
+                    </div>
                 </ul>
-                <div class="col-3 row justify-content-end">
-                    <!--effects buttons-->
-                    
-                    <svg id ="dark_mode" class="col-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
-                        <path opacity="1" d="M448 256c0-106-86-192-192-192V448c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg>
-                 
-                        
-                    <svg id="color_mode" class="col-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
-                        <path opacity="1" d="M512 256c0 .9 0 1.8 0 2.7c-.4 36.5-33.6 61.3-70.1 61.3H344c-26.5 0-48 21.5-48 48c0 3.4 .4 6.7 1 9.9c2.1 10.2 6.5 20 10.8 29.9c6.1 13.8 12.1 27.5 12.1 42c0 31.8-21.6 60.7-53.4 62c-3.5 .1-7 .2-10.6 .2C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm0-96a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM288 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm96 96a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>
-              
-                </div>
-            </div>
         </header>
 
-        <!--Home-->
-        <div id="home" class="row justify-content-center align-items-center ps-5">
-            <div class="home_article col-6"><!--article-->
-                <h2 class="col-12 text-start">Vincent Goyet</h2>
-                <h3 class="col-12 text-start ms-2">Developpeur Web Junior</h3>
-                <p class="col-lg-4 col-md-8  ms-2 text-center"> Statut : Recherche de stage</p>
+        <div class="effects_buttons"> <!--effects buttons-->
+            <svg id ="dark_mode" class="my-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                <path opacity="1" d="M448 256c0-106-86-192-192-192V448c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg>
              
-            </div>
-            <div class="avatar_div col-6 p-0">
-                <img src="./img/portrait.png" alt="avatar" class="col-12" id="avatar">
-                <img src="./img/contour.png" alt ="ombre" class="col-12" id ="ombre">
-            </div>
+                    
+            <svg id="color_mode"  class="my-1"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                <path opacity="1" d="M512 256c0 .9 0 1.8 0 2.7c-.4 36.5-33.6 61.3-70.1 61.3H344c-26.5 0-48 21.5-48 48c0 3.4 .4 6.7 1 9.9c2.1 10.2 6.5 20 10.8 29.9c6.1 13.8 12.1 27.5 12.1 42c0 31.8-21.6 60.7-53.4 62c-3.5 .1-7 .2-10.6 .2C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm0-96a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM288 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm96 96a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>
+        </div>
 
+        <!--Home-->
+        <div id="home" class="container-md">
+            <div class="row h-100 w-100 align-items-center justify-content-md-around">
+                <div class="home_article col-lg-6 d-flex flex-column justify-content-center align-items-center"><!--article-->
+                    <h2 class="text-center">Vincent Goyet</h2>
+                    <h3 class="text-center">Developpeur Web Junior</h3>
+                    <div>
+                        <p class="text-center"> Statut : Recherche de stage</p>
+                    </div>
+                </div>
+                <div class="avatar_div col-lg-6 p-0  d-flex justify-content-center align-items-center">
+                    <img src="./img/portrait.png" alt="avatar" class="img" id="avatar">
+                </div>
+            </div>
         </div>
 
         <!--About-->

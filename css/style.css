@@ -17,13 +17,13 @@
     --element_color:rgba(255, 255, 255, 0);
 }
 [no-color="orange"]{
-    --element_color:rgb(233, 132, 17);
+    --element_color:#E55604;
 }
 [no-color="purple"]{
-    --element_color:rgb(116, 4, 160);
+    --element_color:rgb(87, 25, 168);
 }
 [no-color="blue"]{
-    --element_color:rgb(31, 35, 236);
+    --element_color:#242f91;
 }
 
 /* globals */
@@ -41,6 +41,20 @@ h2{
     color :var(--text_color)
 }
 
+.effects_buttons{
+    display: flex;
+    flex-direction: column;
+ position: fixed;
+ right:2em;
+ top:2em;
+}
+
+.effects_buttons svg{
+
+    height: 1.2em;
+    width: auto;
+    fill: var(--text_color);
+}
 /* header */
 
 header{
@@ -48,7 +62,12 @@ header{
     font-size: large;
     color: var(--text_color);
     height: 3rem;
-    border: blue solid 1px;
+    /* border: blue solid 1px; */
+}
+
+header li{
+    max-width: 40vw;
+    max-height: 5vh;
 }
 
 
@@ -61,36 +80,18 @@ header li a{
     text-decoration: none;
 }
 
-header svg{
-    max-height: 1.2em;
-    width: auto;
-      fill: var(--text_color);
-}
 
 /* home */
 #home{
     height: 55rem;
-    border: red solid 1px;
-}
-.avatar_div{
-    height: 60%;
-    width: 40%;
-    /* border: lime 2px solid; */
-    
+    /* border: red solid 1px; */
 }
 
 #avatar{
-    height: 50vh;
-   width: auto;
-    position: absolute;
-    z-index: 20;
-}
-#ombre{
-    height: 52vh;
-   width: auto;
-    position: absolute;
-    z-index: 10;
-    filter: blur(10px), invert()
+    max-height: 50vh;
+    max-width: 100%;
+    width: auto;
+    filter: drop-shadow(5px 5px 5px var(--text_color));
 }
 
 #home h2{
@@ -113,7 +114,7 @@ header svg{
     height: 0.2em;
     width: 1.5em;
     background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(22,199,75,1) 100%);
-    left:0.8rem;
+    left:-2rem;
     top:48%;
 }
 #home p:after{
@@ -122,7 +123,7 @@ header svg{
     height: 0.2em;
     width: 1.5em;
     background: linear-gradient(90deg, rgba(22,199,75,1) 0%, rgba(255,255,255,0) 100%);
-    right:0.8rem;
+    right:-2rem;
     top:48%;
 }
 
@@ -137,3 +138,23 @@ header svg{
 /* contact */
 
 
+
+/* media queries */
+
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+/* @media (min-width: 576px) { ... } */
+
+/* // Medium devices (tablets, 768px and up) */
+/* @media (min-width: 768px) { ... } */
+
+/* // Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) { ... } */
+
+/* // X-Large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) { ... } */
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+/* @media (min-width: 1400px) { ... } */
