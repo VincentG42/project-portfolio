@@ -61,30 +61,36 @@ header{
     font-family: Titillium Web , sans-serif;
     font-size: large;
     color: var(--text_color);
-    height: 3rem;
+    height: 2rem;
     /* border: blue solid 1px; */
 }
 
 header li{
-    max-width: 40vw;
-    max-height: 5vh;
-}
-
-
-header li{
+    max-width: 30vw;
+    max-height: 3vh;
     list-style: none;
     text-transform: uppercase;
+   
 }
 header li a{
     color: var(--text_color);
-    text-decoration: none;
 }
 
+.underlinLink{
+    fill:var(--text_color);
+    max-width: 100%;
+    position: relative;
+    bottom: 1em;
+    visibility: hidden;
+}
 
+header li:hover .underlinLink{
+    visibility: visible;    
+}
 /* home */
 #home{
-    height: 55rem;
-    /* border: red solid 1px; */
+    height: 56rem;
+    border: 1px solid red;
 }
 
 #avatar{
@@ -131,11 +137,26 @@ header li a{
 
 /* about */
 #about{
-    border: 1px solid yellow;
+    background-color: var(--div_color);
+    border: 1px solid yellow;    
+    height: 55rem;
+}
+
+article{
+    color: var(--text_color);
 }
 /* skills */
-
+#skills{
+    border: 1px solid rgb(17, 0, 255);    
+    height: 55rem;
+    background-color:rgba(17, 0, 255, 0.479); ;
+}
 /* contact */
+#contact{
+    border: 1px solid rgb(0, 255, 13);    
+    height: 55rem;
+    background-color:rgba(0, 255, 13, 0.479); ;
+}
 
 
 

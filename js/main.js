@@ -1,24 +1,8 @@
-
-//  nav bar hover
-const navlinks= document.querySelectorAll('.navlink')
-console.log(navlinks);
-navlinks.forEach((navLink)=>{
-    console.log(navLink);
-// let navLinkHover = gsap.to(navLink, {
-//     paused: true,
-//     opacity: 0
-//   });
-  
-//   navLink.addEventListener("mouseenter", () => navLinkHover.play());
-//   navLink.addEventListener("mouseleave", () => navLinkHover.reverse());
-})
-//  nav bar hover
-
+gsap.registerPlugin(ScrollTrigger);
 //  dark mode switch
 const darkMode = document.querySelector('#dark_mode');
 const html= document.querySelector('html')
 // console.log(html.attributes['data-theme'].value);
-
 
 document.documentElement.setAttribute('data-theme', 'light');
 let buttonRotation =gsap.to(darkMode,{
@@ -38,5 +22,15 @@ darkMode.addEventListener('click', ()=>{
     }
 })
 
+//dark mode 
+// scroll div
 
-//dark mode switch
+gsap.to("#about",{
+    ScrollTrigger: {
+        trigger:"#about",
+        start:"top top",
+        markers:true,
+        toggleActions: "restart pause reverse pause",
+    },
+    y:-300,
+})
