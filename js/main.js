@@ -24,13 +24,14 @@ darkMode.addEventListener('click', ()=>{
 
 //dark mode 
 // scroll div
-
-gsap.to("#about",{
-    ScrollTrigger: {
-        trigger:"#about",
-        start:"top top",
-        markers:true,
-        toggleActions: "restart pause reverse pause",
-    },
-    y:-300,
+let sections = document.querySelectorAll('section')
+sections.forEach(section=>{
+    ScrollTrigger.create({
+        trigger:section,
+        start:'top top',
+        pin:true,
+        pinSpacing:false,
+        markers:false,
+        });
 })
+
