@@ -90,8 +90,12 @@ section{
     /* border: blue solid 1px; */
 }
 
+#sidemenu ul{
+    width: 8em;
+}
+
 #sidemenu li{
-    max-width: 5em;
+    max-width: 100%;
     list-style: none;
     text-transform: uppercase;
    
