@@ -78,6 +78,9 @@ section{
     border-radius: 3px;
   }
 /* === side menu === */
+#sidemenu svg{
+    stroke: var(--text_color);
+}
 
 #sidemenu{
     font-family: Titillium Web , sans-serif;
