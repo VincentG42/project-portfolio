@@ -64,10 +64,12 @@ h2{
 section{
     height: 100vh;
     background-color: var(--div_color);
-    margin-bottom: 3em;
-    margin-top: 3em;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
+.hidden{
+    visibility: hidden;
+}
 /* === scroll bar === */
 ::-webkit-scrollbar {
     width: 0.8em;
@@ -88,6 +90,7 @@ section{
     background-color: var(--div_color);
     color: var(--text_color);
     height: 85vh;
+    width: 15vw;
     position:fixed;
     z-index: 1000;
     /* border: blue solid 1px; */
@@ -97,24 +100,24 @@ section{
     width: 8em;
 }
 
-#sidemenu li{
+.sidemenu_item{
     max-width: 100%;
     list-style: none;
     text-transform: uppercase;
    
 }
-#sidemenu li a{
+#sidemenu  a{
     color: var(--text_color);
 }
 
-.underlinLink{
+.underlineLink{
     fill:var(--text_color);
-    max-width: 100%;
+    max-width: 30%;
     bottom: 1em;
     visibility: hidden;
 }
 
-#sidemenu li:hover .underlinLink{
+.sidemenu_item:hover .underlineLink{
     visibility: visible;    
 }
 /* === home === */
