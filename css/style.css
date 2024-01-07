@@ -13,31 +13,25 @@
     --text_color: #f0f0e9;
 }
 
-[no-color="noColor"]{
+[color-pop="noColor"]{
     --element_color:rgba(255, 255, 255, 0);
 }
-[no-color="orange"]{
+[color-pop="orange"]{
     --element_color:#E55604;
 }
-[no-color="purple"]{
+[color-pop="purple"]{
     --element_color:rgb(87, 25, 168);
 }
-[no-color="blue"]{
+[color-pop="blue"]{
     --element_color:#242f91;
 }
 
+
 /* === globals === */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 body{
     background-color: var(--div_color);
-}
-#main_div{
-    background-color:var(--div_color) ;
- 
+    caret-color: transparent;
 }
 
 h2{
@@ -47,29 +41,18 @@ h2{
     color :var(--text_color)
 }
 
-.effects_buttons{
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    right:2em;
-    top:2em;
-    z-index: 2000;
-}
-
-.effects_buttons svg{
-    height: 1.2em;
-    width: auto;
-    fill: var(--text_color);
-}
 section{
+    background-color:var(--div_color) ;
     height: 100vh;
     background-color: var(--div_color);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    margin-bottom: 3em;
 }
 
 .hidden{
     visibility: hidden;
 }
+
+
 /* === scroll bar === */
 ::-webkit-scrollbar {
     width: 0.8em;
@@ -79,46 +62,73 @@ section{
     background: var(--text_color);
     border-radius: 3px;
   }
-/* === side menu === */
-#sidemenu svg{
-    stroke: var(--text_color);
-}
 
-#sidemenu{
-    font-family: Titillium Web , sans-serif;
-    font-size: large;
-    background-color: var(--div_color);
-    color: var(--text_color);
-    height: 85vh;
-    width: 15vw;
+
+/* === top_bar === */
+#top_bar{
     position:fixed;
-    z-index: 1000;
-    /* border: blue solid 1px; */
+    height: 5em;
+    top:0;
+    z-index:100;
+}
+.effects_buttons{
+    display: flex;   
+    fill: var(--text_color);
 }
 
-#sidemenu ul{
-    width: 8em;
+
+#logo_perso{
+    fill: var(--text_color)
 }
 
-.sidemenu_item{
-    max-width: 100%;
-    list-style: none;
-    text-transform: uppercase;
-   
-}
-#sidemenu  a{
-    color: var(--text_color);
+#color_mode_div{
+    height:2em;
+    width: 2em;
+    
 }
 
-.underlineLink{
-    fill:var(--text_color);
-    max-width: 30%;
-    bottom: 1em;
-    visibility: hidden;
+.color_splashes{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index:101;
+    top:0;
+    left:4%;
+    
+    
+}
+.splash{
+   height:0.4em;
+   width: auto;
+   overflow: visible;
+   cursor:pointer;
+}
+.orange{
+    fill:#E55604;
+    position: relative;
+    left:11%;
+    bottom:10%;
+    
 }
 
-.sidemenu_item:hover .underlineLink{
-    visibility: visible;    
+.purple{
+    fill:rgb(87, 25, 168);;
+    position: relative; 
+    left:4.5%;
+    top:-20%;
+}
+
+.blue{
+    fill:#242f91;
+    position: relative;  
+    left: -2%;
+    bottom:12%;
+}
+.unset{
+    fill:var(--div_color);
+    position: relative;  
+    left: 5%;
+    bottom:58%;
 }
 /* === home === */
 #home{
@@ -165,6 +175,7 @@ section{
     top:48%;
 }
 
+
 /* === about === */
 #about{
     
@@ -182,7 +193,10 @@ article{
     width: auto;
     transform: scaleX(-1);
     filter: drop-shadow(5px 5px 5px var(--text_color));
+    filter: drop-shadow(15px 15px 15px var(--element_color));
 }
+
+
 /* === skills === */
 #skills{
     border: 1px solid rgb(17, 0, 255);    
@@ -233,7 +247,8 @@ article{
   background-color: var(--bg_color);
 }
 
-   
+ 
+
 /* === contact === */
 #contact{
     border: 1px solid rgb(0, 255, 13);    

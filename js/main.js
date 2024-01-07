@@ -1,4 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(TextPlugin);
+
+
 //  dark mode switch
 const darkMode = document.querySelector('#dark_mode');
 const html= document.querySelector('html')
@@ -23,41 +26,71 @@ darkMode.addEventListener('click', ()=>{
 })
 
 //dark mode 
+
 // scroll div
-// let sections = document.querySelectorAll('section')
-// sections.forEach(section=>{
-//     ScrollTrigger.create({
-//         trigger:section,
-//         start:'top top',
-//         pin:true,
-//         pinSpacing:false,
-//         markers:false,
-//         });
-// })
 
-gsap.to('#about',{ clipPath:'polygon(0 0, 0 0, 0 0, 0 0)', y:'-100vh',position:'absolute', duration:0});
-gsap.to('#skills',{ clipPath:'polygon(0 0, 0 0, 0 0, 0 0)',y:'-200vh',position:'absolute', duration:0});
-gsap.to('#contact',{ clipPath:'polygon(0 0, 0 0, 0 0, 0 0)',y:'-300vh',position:'absolute', duration:0});
+let sections = document.querySelectorAll('section')
+sections.forEach(section=>{
+    ScrollTrigger.create({
+        trigger:section,
+        start:'top top',
+        pin:true,
+        pinSpacing:false,
+        markers:false,
+        });
+})
 
-let about = document.querySelector('#about');
-let skills = document.querySelector('#skills');
-let contact = document.querySelector('#contact');
+// color_button
+document.documentElement.setAttribute('color-pop', 'noColor');
 
-let aboutButton = document.querySelector('#about_button');
-let skillsButton = document.querySelector('#skills_button');
-let contactButton = document.querySelector('#contact_button');
 
-let tl = gsap.timeline(); 
-tl.pause()
-
-function divOnView(button, section,tl){
-    tl.to(button,{ x: 200, duration: 1 },0)
-    tl.to(section,{x:'16vw',duration:1},0)
-    tl.to(section,{clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',duration:1},0)
+function changeColor(button, color){
+    button.on('click', ()=>{
+        document.documentElement.setAttribute('color-pop', color);
+    })
 }
 
-aboutButton.addEventListener('click',()=>{
-    tl.play()
-    divOnView(aboutButton,about)
+changeColor($('.purple'),'purple');
+changeColor($('.blue'),'blue');
+changeColor($('.orange'),'orange');
+changeColor($('.unset'),'noColor');
 
+gsap.set('.color_splashes',{visibility:'hidden'});
+
+let tlColorButtons= gsap.timeline();
+tlColorButtons.pause();
+tlColorButtons.to('#color_mode_div',{scale:'3', y:'4em', x:'-2em'},0);
+tlColorButtons.to('.color_splashes',{visibility:'visible'},0,'<0.1');
+
+
+$('#color_mode_div').on('mouseenter',() =>{
+    tlColorButtons.play();
+  
 })
+$('#color_mode_div').on('mouseleave',() =>{
+    tlColorButtons.reverse();
+})
+
+//logo perso
+function logoPerso(button, color){
+    button.on('click',()=>{
+       gsap.set('#logo_perso',{fill:color})
+    })
+}
+
+logoPerso($('.purple'), 'var(--element_color)');
+logoPerso($('.orange'), 'var(--element_color)');
+logoPerso($('.blue'), 'var(--element_color)');
+logoPerso($('.unset'), 'var(--text_color)');
+
+
+// $('.purple').on('click',()=>{
+//     let tlLogoPerso = gsap.timeline();
+    
+//     tlLogoPerso.to('#logo_perso',{visibility:'hidden'})
+//     tlLogoPerso.to('#logo_perso',{fill:'var(--element_color)'})
+//     tlLogoPerso.to('#logo_perso',{visibility:'visible'})
+// })
+
+// home -> statut
+
