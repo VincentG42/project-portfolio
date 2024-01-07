@@ -32,6 +32,7 @@
 body{
     background-color: var(--div_color);
     caret-color: transparent;
+    overflow-x: hidden;
 }
 
 h2{
@@ -136,10 +137,21 @@ section{
 }
 
 #hero_image{
+    position: relative;
     max-height: 100%;
     max-width: 60vh;
     width: auto;
     filter: drop-shadow(1px 1px 1px var(--text_color));
+}
+#hero_shadow{
+    position: absolute;
+    right:11.5%;
+    max-height: 100%;
+    max-width: 60vh;
+    width: auto;
+    filter:drop-shadow(-1px 4px 21px  var(--element_color)) drop-shadow(-1px 4px 21px  var(--element_color)) blur(10px);
+    /* filter: */
+    z-index:-1;
 }
 
 #home h2{
@@ -156,7 +168,7 @@ section{
     color:var(--text_color);
 }
 
-#home p:before{
+#statut:before{
     position: absolute;
     content: "";
     height: 0.2em;
@@ -165,7 +177,7 @@ section{
     left:-2rem;
     top:48%;
 }
-#home p:after{
+#statut:after{
     position: absolute;
     content: "";
     height: 0.2em;
@@ -173,6 +185,13 @@ section{
     background: linear-gradient(90deg, rgba(22,199,75,1) 0%, rgba(255,255,255,0) 100%);
     right:-2rem;
     top:48%;
+}
+#statut_precision{
+       height: 8em;
+        border-radius: 15px;
+        border: 1px solid var(--bg_color);
+        box-shadow: 5px 5px 15px 2px var(--element_color);
+        
 }
 
 

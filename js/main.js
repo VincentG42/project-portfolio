@@ -84,13 +84,20 @@ logoPerso($('.blue'), 'var(--element_color)');
 logoPerso($('.unset'), 'var(--text_color)');
 
 
-// $('.purple').on('click',()=>{
-//     let tlLogoPerso = gsap.timeline();
-    
-//     tlLogoPerso.to('#logo_perso',{visibility:'hidden'})
-//     tlLogoPerso.to('#logo_perso',{fill:'var(--element_color)'})
-//     tlLogoPerso.to('#logo_perso',{visibility:'visible'})
-// })
-
+gsap.set($('#hero_shadow'),{opacity:0});
+if (html.attributes['data-theme'].value != 'noColor'){
+    gsap.set($('#hero_shadow'),{opacity:1});
+}
 // home -> statut
 
+// #statut
+let tlStatut= gsap.timeline({repeat:-1,  repeatDelay: 5})
+tlStatut.to('#statut',0.05,{x:'+=0.5em', rotate: '0.5deg', yoyo:true, repeat:1})
+tlStatut.to('#statut',0.05,{x:'-=0.5em', rotate: '-0.5deg', yoyo:true, repeat:1})
+
+gsap.set('#statut_precision',{clipPath:'polygon(0 50%, 100% 50%, 100% 50%, 0 50%)'})
+
+gsap.to('#statut_precision',{clipPath:'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',duration:2})
+
+// clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+// clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
