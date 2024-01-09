@@ -95,9 +95,16 @@ let tlStatut= gsap.timeline({repeat:-1,  repeatDelay: 5})
 tlStatut.to('#statut',0.05,{x:'+=0.5em', rotate: '0.5deg', yoyo:true, repeat:1})
 tlStatut.to('#statut',0.05,{x:'-=0.5em', rotate: '-0.5deg', yoyo:true, repeat:1})
 
-gsap.set('#statut_precision',{clipPath:'polygon(0 50%, 100% 50%, 100% 50%, 0 50%)'})
+gsap.set('#statut_precision',{autoAlpha:0})
 
-gsap.to('#statut_precision',{clipPath:'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',duration:2})
+let articleHome = document.querySelector('.home_article')
 
-// clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-// clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+
+    articleHome.addEventListener('mouseenter', () =>{
+gsap.to('#statut_precision',{autoAlpha:1, duration:1})
+})
+
+articleHome.addEventListener('mouseleave', () =>{
+    gsap.to('#statut_precision',{autoAlpha:0,duration:0.5})
+    })
+
