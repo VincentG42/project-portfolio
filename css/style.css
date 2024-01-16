@@ -131,10 +131,25 @@ section{
     left: 5%;
     bottom:58%;
 }
-/* === home === */
-#home{
-    border: 1px solid red;
+
+/* === social media === */
+
+#social_media{
+    position: fixed;
+    z-index:1000;
+    top:50%;
+    left:1em;
 }
+
+#social_media svg{
+    fill: var(--text_color)
+}
+
+
+/* === home === */
+/* #home{
+    border: 1px solid red;
+} */
 
 #hero_image{
     position: relative;
@@ -196,11 +211,9 @@ section{
 
 
 /* === about === */
-#about{
-    
+/* #about{
     border: 1px solid yellow;    
-
-}
+} */
 
 article{
     color: var(--text_color);
@@ -217,9 +230,9 @@ article{
 
 
 /* === skills === */
-#skills{
+/* #skills{
     border: 1px solid rgb(17, 0, 255);    
-}
+} */
 #content {
     padding-top: 3em;
     grid-template-columns: repeat(6, 1fr);
@@ -269,8 +282,31 @@ article{
  
 
 /* === contact === */
-#contact{
+/* #contact{
     border: 1px solid rgb(0, 255, 13);    
+} */
+#contact p{
+    color: var(--text_color);
+}
+#contact a{
+    color: var(--text_color)
+}
+#contact a:visited{
+    color: var(--text_color)
+}
+
+.contact_links{
+    position: relative;
+}
+#contact svg{
+    position: absolute;
+    left :-8em;
+    top:1em;
+    rotate:-20deg;
+    width: 10em;
+    height: 5em;
+    fill:var(--text_color);
+    stroke: var(--text_color);
 }
 
 

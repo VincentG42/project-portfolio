@@ -95,16 +95,16 @@ let tlStatut= gsap.timeline({repeat:-1,  repeatDelay: 5})
 tlStatut.to('#statut',0.05,{x:'+=0.5em', rotate: '0.5deg', yoyo:true, repeat:1})
 tlStatut.to('#statut',0.05,{x:'-=0.5em', rotate: '-0.5deg', yoyo:true, repeat:1})
 
-gsap.set('#statut_precision',{autoAlpha:0})
+// gsap.set('#statut_precision',{autoAlpha:0})
 
-let articleHome = document.querySelector('.home_article')
+// let articleHome = document.querySelector('.home_article')
 
 
-    articleHome.addEventListener('mouseenter', () =>{
-gsap.to('#statut_precision',{autoAlpha:1, duration:1})
-})
+//     articleHome.addEventListener('mouseenter', () =>{
+// gsap.to('#statut_precision',{autoAlpha:1, duration:1})
+// })
 
-articleHome.addEventListener('mouseleave', () =>{
-    gsap.to('#statut_precision',{autoAlpha:0,duration:0.5})
-    })
+// articleHome.addEventListener('mouseleave', () =>{
+//     gsap.to('#statut_precision',{autoAlpha:0,duration:0.5})
+//     })
 
