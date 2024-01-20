@@ -47,6 +47,7 @@ section{
     height: 100vh;
     background-color: var(--div_color);
     margin-bottom: 3em;
+    padding: 5em;
 }
 
 .hidden{
@@ -137,12 +138,14 @@ section{
 #social_media{
     position: fixed;
     z-index:1000;
-    top:50%;
+    top:45%;
     left:1em;
 }
 
 #social_media svg{
-    fill: var(--text_color)
+    fill: var(--text_color);
+    width:5em;
+     height:5em;
 }
 
 
@@ -153,21 +156,12 @@ section{
 
 #hero_image{
     position: relative;
-    max-height: 100%;
-    max-width: 60vh;
+    max-height: 75vh;
+    max-width: 100%;
     width: auto;
-    filter: drop-shadow(1px 1px 1px var(--text_color));
+    filter: drop-shadow(-10px -10px 15px var(--element_color));
 }
-#hero_shadow{
-    position: absolute;
-    right:11.5%;
-    max-height: 100%;
-    max-width: 60vh;
-    width: auto;
-    filter:drop-shadow(-1px 4px 21px  var(--element_color)) drop-shadow(-1px 4px 21px  var(--element_color)) blur(10px);
-    /* filter: */
-    z-index:-1;
-}
+
 
 #home h2{
     font-family: Titillium Web , sans-serif;
@@ -201,8 +195,7 @@ section{
     right:-2rem;
     top:48%;
 }
-#statut_precision{
-       height: 8em;
+#statut_precision p{
         border-radius: 15px;
         border: 1px solid var(--bg_color);
         
@@ -313,11 +306,61 @@ article{
 
 /* === media queries === */
 
-/* // X-Small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap */
+/* // X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 321px) { 
+    #contact svg{
+        position: absolute;
+        left :-4em;
+        top:10em;
+        rotate:90deg;
+        width: 5em;
+        height: 3em;
+        fill:var(--text_color);
+        stroke: var(--text_color);
+        transform:scaleX(-1)
+    }
+}
+@media (max-width: 576px) { 
+    #contact svg{
+        position: absolute;
+        left :-4em;
+        top:0em;
+        rotate:90deg;
+        width: 5em;
+        height: 3em;
+        fill:var(--text_color);
+        stroke: var(--text_color);
+        transform:scaleX(-1)
+    }
+    #social_media{
+        position: fixed;
+        z-index:1000;
+        top:45%;
+        left:0em;
+    }
+
+    #social_media svg{
+        fill: var(--text_color);
+        width:3em;
+         height:3em;
+    }
+
+
+} 
 
 /* // Small devices (landscape phones, 576px and up) */
-/* @media (min-width: 576px) { ... } */
+@media (min-width: 576px) { 
+    #contact svg{
+        position: absolute;
+        left :-5em;
+        top:1em;
+        rotate:-5deg;
+        width: 5em;
+        height: 3em;
+        fill:var(--text_color);
+        stroke: var(--text_color);
+    }
+}
 
 /* // Medium devices (tablets, 768px and up) */
 /* @media (min-width: 768px) { ... } */
