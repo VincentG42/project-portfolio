@@ -8,6 +8,7 @@ const html= document.querySelector('html')
 // console.log(html.attributes['data-theme'].value);
 
 document.documentElement.setAttribute('data-theme', 'light');
+
 let buttonRotation =gsap.to(darkMode,{
     duration: 1.5,
     rotation:180,
@@ -41,7 +42,7 @@ sections.forEach(section=>{
 })
 
 // color_button
-document.documentElement.setAttribute('color-pop', 'noColor');
+document.documentElement.setAttribute('color-pop', 'noColor'); // default mode with no color
 
 
 function changeColor(button, color){
@@ -55,6 +56,8 @@ changeColor($('.blue'),'blue');
 changeColor($('.orange'),'orange');
 changeColor($('.unset'),'noColor');
 
+
+// gestion svg palette pour choisir les couleurs
 gsap.set('.color_splashes',{visibility:'hidden'});
 
 let tlColorButtons= gsap.timeline();
@@ -65,8 +68,8 @@ tlColorButtons.to('.color_splashes',{visibility:'visible'},0,'<0.1');
 
 $('#color_mode_div').on('mouseenter',() =>{
     tlColorButtons.play();
-  
 })
+
 $('#color_mode_div').on('mouseleave',() =>{
     tlColorButtons.reverse();
 })
@@ -95,16 +98,15 @@ let tlStatut= gsap.timeline({repeat:-1,  repeatDelay: 5})
 tlStatut.to('#statut',0.05,{x:'+=0.5em', rotate: '0.5deg', yoyo:true, repeat:1})
 tlStatut.to('#statut',0.05,{x:'-=0.5em', rotate: '-0.5deg', yoyo:true, repeat:1})
 
-// gsap.set('#statut_precision',{autoAlpha:0})
-
-// let articleHome = document.querySelector('.home_article')
+// trad fr/en
 
 
-//     articleHome.addEventListener('mouseenter', () =>{
-// gsap.to('#statut_precision',{autoAlpha:1, duration:1})
-// })
 
-// articleHome.addEventListener('mouseleave', () =>{
-//     gsap.to('#statut_precision',{autoAlpha:0,duration:0.5})
-//     })
+gsap.set(".english",{display :"none"}) // default english part hidden
+
+$('#trad_button').on('click', ()=>{
+    if $('.english').display
+})
+
+// #trad_button
 
