@@ -36,16 +36,16 @@ gsap.registerPlugin(TextPlugin);
 
     // scroll div
 
-    let sections = document.querySelectorAll('section')
-    sections.forEach(section=>{
-        ScrollTrigger.create({
-            trigger:section,
-            start:'top top',
-            pin:true,
-            pinSpacing:false,
-            markers:false,
-            });
-    })
+let sections = document.querySelectorAll('section')
+sections.forEach(section=>{
+    ScrollTrigger.create({
+        trigger:section,
+        start:'top top',
+        pin:true,
+        pinSpacing:false,
+        markers:false,
+    });
+})
 
     // color_button
     document.documentElement.setAttribute('color-pop', 'noColor'); // default mode with no color
@@ -72,32 +72,26 @@ gsap.registerPlugin(TextPlugin);
     tlColorButtons.to('.color_splashes',{visibility:'visible'},0,'<0.1');
 
 
-    $('#color_mode_div').on('mouseenter',() =>{
-        tlColorButtons.play();
-    })
+$('#color_mode_div').on('mouseenter',() =>{
+    tlColorButtons.play();
+})
+$('#color_mode_div').on('mouseleave',() =>{
+    tlColorButtons.reverse();
+})
 
-    $('#color_mode_div').on('mouseleave',() =>{
-        tlColorButtons.reverse();
+//logo perso
+function logoPerso(button, color){
+    button.on('click',()=>{
+    gsap.set('#logo_perso',{fill:color})
     })
-
-    //logo perso
-    function logoPerso(button, color){
-        button.on('click',()=>{
-        gsap.set('#logo_perso',{fill:color})
-        })
-    }
+}
 
     logoPerso($('.purple'), 'var(--element_color)');
     logoPerso($('.orange'), 'var(--element_color)');
     logoPerso($('.blue'), 'var(--element_color)');
     logoPerso($('.unset'), 'var(--text_color)');
 
-
-    gsap.set($('#hero_shadow'),{opacity:0});
-    if (html.attributes['data-theme'].value != 'noColor'){
-        gsap.set($('#hero_shadow'),{opacity:1});
-    }
-    // home -> statut
+// home -> statut
 
     // #statut
     let tlStatut= gsap.timeline({repeat:-1,  repeatDelay: 5})
