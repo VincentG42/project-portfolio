@@ -62,7 +62,6 @@ sections.forEach(section=>{
     changeColor($('.orange'),'orange');
     changeColor($('.unset'),'noColor');
 
-
     // gestion svg palette pour choisir les couleurs
     gsap.set('.color_splashes',{visibility:'hidden'});
 
@@ -102,12 +101,46 @@ function logoPerso(button, color){
 
 
 
-    gsap.set(".english",{display :"none"}) // default english part hidden
+     // default english part hidden
+    gsap.set(".english",{display :"none"})
 
-    $('#trad_button').on('click', ()=>{
-        if ($('.english').display ){
+    let english = document.querySelectorAll('.english');
+    let french = document.querySelectorAll('.french');
+     //button event
+    $('#check').on('change',()=>{
+        if( $('#check').checked){
+
+            english.forEach(element => {
+                element.style.display = 'none'
+            });
+
+            french.forEach(element =>{
+                element.style.display = 'block'
+            })
+        } else{
+            english.forEach(element => {
+                element.style.display = 'block'
+            })
+
+            french.forEach(element =>{
+                element.style.display = 'none'
+            })
+        }   
+    }) 
+
+
+
+
+    //     if ( this.checked){
+    //         console.log('hello');
+    //         gsap.set(".english",{display :"none"})
+    //         gsap.set(".french",{display :"block"})
+    //     } else {
+    //         gsap.set(".english",{display :"block"})
+    //         gsap.set(".french",{display :"none"})
+    //         console.log('world');
+                
+    //     }
+    // })
             
-        }
-    })
-
-    // #trad_button
+    
