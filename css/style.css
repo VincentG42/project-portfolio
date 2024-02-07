@@ -245,9 +245,6 @@ section{
 
 
 /* === about === */
-/* #about{
-    border: 1px solid yellow;    
-} */
 
 article{
     color: var(--text_color);
@@ -302,9 +299,11 @@ article{
 }
 
 
-
-
 /* === contact === */
+#contact h2{
+    font-family: Titillium Web , sans-serif;
+    color:var(--text_color);
+}
 
 #contact p{
     color: var(--text_color);
