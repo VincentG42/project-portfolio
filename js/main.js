@@ -144,3 +144,4 @@ function logoPerso(button, color){
     // })
             
     
+// https://www.youtube.com/watch?v=bDgWaqXkTEg pour inspiration anim cards

@@ -30,6 +30,9 @@ body{
     background-color: var(--div_color);
     caret-color: transparent;
     overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 h1{
@@ -38,7 +41,7 @@ h1{
     font-weight: bolder;
     color :var(--text_color)
 }
-h1{
+h2{
     font-family: titillium web, sans-serif;
     font-size:3em;
     font-weight: bolder;
@@ -50,11 +53,32 @@ section{
     height: 100vh;
     background-color: var(--div_color);
     margin-bottom: 3em;
-    padding: 8em;
+    padding: 6em;
 }
 
 .hidden{
     visibility: hidden;
+}
+
+
+
+/* === scroll bar === */
+::-webkit-scrollbar {
+    width: 0.8em;
+    background-color: var(--div_color);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--text_color);
+    border-radius: 3px;
+}
+
+
+/* === top_bar === */
+#top_bar{
+    position:fixed;
+    height: 5em;
+    top:0;
+    z-index:100;
 }
 
 /* trad button (toggle switch) */
@@ -99,25 +123,6 @@ section{
 
 #check:checked + .toggle {
     background-color: var(--element_color);
-}
-
-/* === scroll bar === */
-::-webkit-scrollbar {
-    width: 0.8em;
-    background-color: var(--div_color);
-}
-::-webkit-scrollbar-thumb {
-    background: var(--text_color);
-    border-radius: 3px;
-}
-
-
-/* === top_bar === */
-#top_bar{
-    position:fixed;
-    height: 5em;
-    top:0;
-    z-index:100;
 }
 
 .effects_buttons{
@@ -190,14 +195,11 @@ section{
 
 
 /* === home === */
-/* #home{
-    border: 1px solid red;
-} */
 
 #hero_image{
     position: relative;
     max-height: 75vh;
-    max-width: 100%;
+    max-width: auto;
     width: auto;
     filter: drop-shadow(-10px -10px 15px var(--element_color));
 }
@@ -261,42 +263,54 @@ article{
 
 
 /* === skills === */
-.card {
-    box-sizing: border-box;
-    width: 190px;
-    height: 254px;
-    background: rgba(var(--text_color), 0.58);
-    border: 1px solid white;
-    box-shadow: 12px 17px 51px rgba(var(--element_color), 0.22);
-    backdrop-filter: blur(6px);
-    border-radius: 17px;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.5s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    user-select: none;
-    font-weight: bolder;
-    color: rgba(var(--text_color), 0.58);
-    overflow: clip;
-    background-image: url(../img/projects_img/integration\ pharma.png);
-    background-size: auto;
-    background-repeat: no-repeat;
-}
-
-.card:hover {
-    border: 1px solid var(--text_color);
-    transform: scale(1.05);
-}
-
-.card:active {
-    transform: scale(0.95) rotateZ(1.7deg);
-}
-
-.card img{
+.card_wrapper{
+    height: 100%;
     width: 100%;
 }
+
+.skills_card{
+    height: 60%;
+    width: 60%;
+    padding: 1em;
+    border: 1px red solid;
+    background-color: var(--div_color);
+    overflow-y: hidden;
+    translate: 0 3em;
+    box-shadow: 1px 3px 3px var(--text_color);
+}
+
+#skills h3{
+    font-family: Titillium Web , sans-serif;
+    font-size: 2em;
+    color:var(--text_color);
+    margin-bottom: 2em;
+}
+
+.skills_card img{
+    width: 100%;
+}
+
+.skills_card .img_card_hori{
+    height: 100%;
+    width: auto;
+    translate:-60%;
+}
+
+.skills_card .img_card_hori:hover{
+    transform:translateX(60%) ;
+    transition-duration: 2s;
+}
+
+.skills_card img:hover{
+    transform:translateY(-60%) ;
+    transition-duration: 2s;
+}
+
+.skills_card svg{
+    fill:var(--text_color);
+    height: 4em;
+}
+
 
 
 /* === contact === */
