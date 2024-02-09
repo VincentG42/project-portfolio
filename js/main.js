@@ -2,13 +2,7 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
 
 
-
-
-
-
-
-
-    //  dark mode switch
+    //  dark mode switch ///////////////////////////////
     const darkMode = document.querySelector('#dark_mode');
     const html= document.querySelector('html')
     // console.log(html.attributes['data-theme'].value);
@@ -32,9 +26,7 @@ gsap.registerPlugin(TextPlugin);
         }
     })
 
-    //dark mode 
-
-    // scroll div
+    // scroll div /////////////////////////////////////////////////////
 
 let sections = document.querySelectorAll('section')
 sections.forEach(section=>{
@@ -47,15 +39,15 @@ sections.forEach(section=>{
     });
 })
 
-    // color_button
-    document.documentElement.setAttribute('color-pop', 'noColor'); // default mode with no color
+    // color_button //////////////////////////////////
+document.documentElement.setAttribute('color-pop', 'noColor'); // default mode with no color
 
 
-    function changeColor(button, color){
-        button.on('click', ()=>{
-            document.documentElement.setAttribute('color-pop', color);
-        })
-    }
+function changeColor(button, color){
+    button.on('click', ()=>{
+        document.documentElement.setAttribute('color-pop', color);
+    })
+}
 
     changeColor($('.purple'),'purple');
     changeColor($('.blue'),'blue');
@@ -78,7 +70,7 @@ $('#color_mode_div').on('mouseleave',() =>{
     tlColorButtons.reverse();
 })
 
-//logo perso
+//logo perso ///////////////////
 function logoPerso(button, color){
     button.on('click',()=>{
     gsap.set('#logo_perso',{fill:color})
@@ -90,14 +82,15 @@ function logoPerso(button, color){
     logoPerso($('.blue'), 'var(--element_color)');
     logoPerso($('.unset'), 'var(--text_color)');
 
-// home -> statut
+// home -> statut//////////////////////////////////////////
 
     // #statut
     let tlStatut= gsap.timeline({repeat:-1,  repeatDelay: 5})
     tlStatut.to('#statut',0.05,{x:'+=0.5em', rotate: '0.5deg', yoyo:true, repeat:1})
     tlStatut.to('#statut',0.05,{x:'-=0.5em', rotate: '-0.5deg', yoyo:true, repeat:1})
 
-    // trad fr/en
+
+    // trad fr/en /////////////////////////////////////////////////
 
 
 
@@ -139,9 +132,34 @@ function logoPerso(button, color){
     //         gsap.set(".english",{display :"block"})
     //         gsap.set(".french",{display :"none"})
     //         console.log('world');
-                
     //     }
     // })
-            
-    
-// https://www.youtube.com/watch?v=bDgWaqXkTEg pour inspiration anim cards
+
+
+
+    // carroussel portfolios ///////////////////////////////////////////////////
+
+    // let card1 = document.querySelector('.card_1');
+    let cards =document.querySelectorAll('.skills_card');
+    let next = document.querySelector('.next');
+    let previous = document.querySelector('.previous');
+    let index = 0;
+
+    let folioTl = gsap.timeline();
+
+
+// console.log(cards[1])
+
+    next.addEventListener('click', ()=>{
+        for(index <=cards.length; index += 1;){
+            folioTl.to(cards[index],{scale:2,opacity:0, duration: 2});
+            folioTl.to(cards[index],{translateY:2000})
+            folioTl.play();
+
+        }
+    })
+
+
+    previous.addEventListener('click', ()=>{
+        folioTl.reverse();
+    })

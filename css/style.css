@@ -28,6 +28,7 @@
 
 body{
     background-color: var(--div_color);
+    color: var(--text_color);
     caret-color: transparent;
     overflow-x: hidden;
     padding: 0;
@@ -39,13 +40,16 @@ h1{
     font-family: titillium web, sans-serif;
     font-size:4em;
     font-weight: bolder;
-    color :var(--text_color)
 }
 h2{
     font-family: titillium web, sans-serif;
     font-size:3em;
     font-weight: bolder;
-    color :var(--text_color)
+}
+
+h3{
+    font-family: Titillium Web , sans-serif;
+    color:var(--text_color);
 }
 
 section{
@@ -193,6 +197,18 @@ section{
     height:5em;
 }
 
+#github{
+    position: relative;
+}
+#github::after{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1em;
+    background: radial-gradient(var(--element_color), rgba(fff,0));
+}
+
 
 /* === home === */
 
@@ -204,20 +220,9 @@ section{
     filter: drop-shadow(-10px -10px 15px var(--element_color));
 }
 
-
-
-#home h2{
-    font-family: Titillium Web , sans-serif;
-    color:var(--text_color);
-}
-#home h3{
-    font-family: Titillium Web , sans-serif;
-    color:var(--text_color);
-}
 #home p{
     font-family: Montserrat, serif;
     position: relative;
-    color:var(--text_color);
 }
 
 #statut:before{
@@ -241,57 +246,64 @@ section{
 
 #statut_precision{
         height: 8em;
-        border-radius: 5px;
-        border: 1px solid var(--text_color);
+        border-radius: 3px;
+        box-shadow: 1px 3px 8px var(--element_color),1px 1px 1px var(--text_color);
 }
 
 
 /* === about === */
 
-article{
-    color: var(--text_color);
-}
 
 #avatar{
     max-height: 50vh;
     max-width: 100%;
     width: auto;
     transform: scaleX(-1);
-    filter: drop-shadow(5px 5px 5px var(--text_color));
     filter: drop-shadow(15px 15px 15px var(--element_color));
 }
 
 
 /* === skills === */
 .card_wrapper{
-    height: 100%;
-    width: 100%;
+    height: 85%;
+    width: 80%;
+    position:relative;
 }
 
 .skills_card{
-    height: 60%;
-    width: 60%;
+    height: 90%;
+    width: 80%;
     padding: 1em;
-    border: 1px red solid;
     background-color: var(--div_color);
     overflow-y: hidden;
     translate: 0 3em;
     box-shadow: 1px 3px 3px var(--text_color);
+    position: absolute;
+    border-left: 1.5em var(--div_color) solid;
+    border-bottom: 0.5em var(--div_color) solid;
 }
 
 #skills h3{
-    font-family: Titillium Web , sans-serif;
-    font-size: 2em;
-    color:var(--text_color);
-    margin-bottom: 2em;
+    margin-bottom: 1em;
+}
+
+.previous svg, .next svg{
+    fill: var(--text_color);
+    height: 5em;
+    width: 2em;
 }
 
 .skills_card img{
     width: 100%;
 }
 
+.skills_card p{
+    color:var(--text_color);
+
+}
+
 .skills_card .img_card_hori{
-    height: 100%;
+    height: 90%;
     width: auto;
     translate:-60%;
 }
@@ -311,17 +323,28 @@ article{
     height: 4em;
 }
 
+.card_1{
+    top:0;
+    left: 15%;
+
+}
+.card_2{
+    position: absolute;
+    top:5%;
+    left: 13%;
+
+
+}
+.card_3{
+    position: absolute;
+    top:10%;
+    left: 11%;
+}
+
 
 
 /* === contact === */
-#contact h2{
-    font-family: Titillium Web , sans-serif;
-    color:var(--text_color);
-}
 
-#contact p{
-    color: var(--text_color);
-}
 #contact a{
     color: var(--text_color)
 }
