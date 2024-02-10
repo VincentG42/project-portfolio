@@ -101,41 +101,16 @@ function logoPerso(button, color){
     let french = document.querySelectorAll('.french');
      //button event
     $('#check').on('change',()=>{
-        if( $('#check').checked){
-
-            english.forEach(element => {
-                element.style.display = 'none'
-            });
-
-            french.forEach(element =>{
-                element.style.display = 'block'
-            })
-        } else{
-            english.forEach(element => {
-                element.style.display = 'block'
-            })
-
-            french.forEach(element =>{
-                element.style.display = 'none'
-            })
-        }   
-    }) 
-
-
-
-
-    //     if ( this.checked){
-    //         console.log('hello');
-    //         gsap.set(".english",{display :"none"})
-    //         gsap.set(".french",{display :"block"})
-    //     } else {
-    //         gsap.set(".english",{display :"block"})
-    //         gsap.set(".french",{display :"none"})
-    //         console.log('world');
-    //     }
-    // })
-
-
+        if ($('#check').is(':checked')){
+            console.log('hello');
+            gsap.set(".english",{display :"block"})
+            gsap.set(".french",{display :"none"})
+        } else {
+            gsap.set(".english",{display :"none"})
+            gsap.set(".french",{display :"block"})
+            console.log('world');
+        }
+    })
 
     // carroussel portfolios ///////////////////////////////////////////////////
 
@@ -143,22 +118,18 @@ function logoPerso(button, color){
     let cards =document.querySelectorAll('.skills_card');
     let next = document.querySelector('.next');
     let previous = document.querySelector('.previous');
-    let index = 0;
 
     let folioTl = gsap.timeline();
-
-
-// console.log(cards[1])
+    // console.log(cards)
 
     next.addEventListener('click', ()=>{
-        for(index <=cards.length; index += 1;){
-            folioTl.to(cards[index],{scale:2,opacity:0, duration: 2});
-            folioTl.to(cards[index],{translateY:2000})
-            folioTl.play();
-
+        for(i=0; i <cards.length; i += 1){
+        //     folioTl.to(cards[index],{scale:2,opacity:0, duration: 2});
+        //     folioTl.to(cards[index],{translateY:2000})
+        //     folioTl.play();
+        console.log(document.querySelector(`card_${i+1}`))
         }
     })
-
 
     previous.addEventListener('click', ()=>{
         folioTl.reverse();
