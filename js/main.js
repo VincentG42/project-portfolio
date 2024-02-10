@@ -1,6 +1,4 @@
 gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(TextPlugin);
-
 
     //  dark mode switch ///////////////////////////////
     const darkMode = document.querySelector('#dark_mode');
@@ -92,8 +90,6 @@ function logoPerso(button, color){
 
     // trad fr/en /////////////////////////////////////////////////
 
-
-
      // default english part hidden
     gsap.set(".english",{display :"none"})
 
@@ -102,35 +98,49 @@ function logoPerso(button, color){
      //button event
     $('#check').on('change',()=>{
         if ($('#check').is(':checked')){
-            console.log('hello');
+            // console.log('hello');
             gsap.set(".english",{display :"block"})
             gsap.set(".french",{display :"none"})
         } else {
             gsap.set(".english",{display :"none"})
             gsap.set(".french",{display :"block"})
-            console.log('world');
+            // console.log('world');
         }
     })
 
     // carroussel portfolios ///////////////////////////////////////////////////
 
     // let card1 = document.querySelector('.card_1');
-    let cards =document.querySelectorAll('.skills_card');
+    let cards =document.querySelector('.card_wrapper');
     let next = document.querySelector('.next');
     let previous = document.querySelector('.previous');
+    console.log(cards.children);
 
     let folioTl = gsap.timeline();
-    // console.log(cards)
+    function animateFolioCard(element){
+        folioTl.to(element,{scale:2,opacity:0, duration: 1, ease: "power3.inOut"});
+        folioTl.to(element,{translateY:2000})
+    }
+    index=0;
 
     next.addEventListener('click', ()=>{
-        for(i=0; i <cards.length; i += 1){
-        //     folioTl.to(cards[index],{scale:2,opacity:0, duration: 2});
-        //     folioTl.to(cards[index],{translateY:2000})
-        //     folioTl.play();
-        console.log(document.querySelector(`card_${i+1}`))
-        }
+        if( index < cards.children.length-1){
+            animateFolioCard(cards.children[cards.children.length-1 -index])
+            folioTl.play();
+
+
+                index+=1;
+            }
+
     })
 
     previous.addEventListener('click', ()=>{
-        folioTl.reverse();
+        if( index > 0){
+        animateFolioCard(cards.children[cards.children.length-1 -index])
+            folioTl.reverse();
+        console.log(cards.children[index]);
+
+            index -=1;
+        }
+
     })

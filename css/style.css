@@ -6,6 +6,7 @@
     --div_color :#FEFBE9;
     --text_color: #111111;
 }
+
 [data-theme="dark"] {
     --div_color :#111111;
     --text_color: #FEFBE9;
@@ -14,12 +15,15 @@
 [color-pop="noColor"]{
     --element_color:rgba(255, 255, 255, 0);
 }
+
 [color-pop="orange"]{
     --element_color:#F76B15;
 }
+
 [color-pop="purple"]{
     --element_color:#8E4EC6;
 }
+
 [color-pop="blue"]{
     --element_color:#3E63DD;
 }
@@ -41,6 +45,7 @@ h1{
     font-size:4em;
     font-weight: bolder;
 }
+
 h2{
     font-family: titillium web, sans-serif;
     font-size:3em;
@@ -116,6 +121,7 @@ section{
     line-height: 1;
     
 }
+
 .toggle-text p{
     font-weight: bold;
     color : var(--text_color)
@@ -151,6 +157,7 @@ section{
     top:0;
     left:4%;
 }
+
 .splash{
     height:0.4em;
     width: auto;
@@ -175,6 +182,7 @@ section{
     left: -2%;
     bottom:12%;
 }
+
 .unset{
     fill:var(--div_color);
     position: relative;  
@@ -200,14 +208,15 @@ section{
 #github{
     position: relative;
 }
-#github::after{
+
+/* #github::after{
     content:"";
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 1em;
     background: radial-gradient(var(--element_color), rgba(fff,0));
-}
+} */
 
 
 /* === home === */
@@ -234,6 +243,7 @@ section{
     left:-2rem;
     top:48%;
 }
+
 #statut:after{
     position: absolute;
     content: "";
@@ -250,10 +260,7 @@ section{
         box-shadow: 1px 3px 8px var(--element_color),1px 1px 1px var(--text_color);
 }
 
-
 /* === about === */
-
-
 #avatar{
     max-height: 50vh;
     max-width: 100%;
@@ -261,7 +268,6 @@ section{
     transform: scaleX(-1);
     filter: drop-shadow(15px 15px 15px var(--element_color));
 }
-
 
 /* === skills === */
 .card_wrapper{
@@ -324,6 +330,7 @@ section{
 }
 
 .card_1{
+    position: absolute;
     top:0;
     left: 15%;
 }
@@ -345,6 +352,7 @@ section{
 #contact a{
     color: var(--text_color)
 }
+
 #contact a:visited{
     color: var(--text_color)
 }
@@ -352,6 +360,7 @@ section{
 .contact_links{
     position: relative;
 }
+
 #contact svg{
     position: absolute;
     left :-8em;
@@ -362,8 +371,6 @@ section{
     fill:var(--text_color);
     stroke: var(--text_color);
 }
-
-
 
 /* === media queries === */
 
