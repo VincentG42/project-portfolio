@@ -127,8 +127,6 @@ function logoPerso(button, color){
         if( index < cards.children.length-1){
             animateFolioCard(cards.children[cards.children.length-1 -index])
             folioTl.play();
-
-
                 index+=1;
             }
 
@@ -136,11 +134,9 @@ function logoPerso(button, color){
 
     previous.addEventListener('click', ()=>{
         if( index > 0){
-        animateFolioCard(cards.children[cards.children.length-1 -index])
+            animateFolioCard(cards.children[cards.children.length-1 -index])
             folioTl.reverse();
-        console.log(cards.children[index]);
-
-            index -=1;
+                index -=1;
         }
 
     })
