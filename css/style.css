@@ -227,7 +227,7 @@ section{
 #hero_image{
     position: relative;
     max-height: 75vh;
-    max-width: auto;
+    max-width: 100%;
     width: auto;
     filter: drop-shadow(-10px -10px 15px var(--element_color));
 }
@@ -488,8 +488,19 @@ scale: 1;
         fill: var(--text_color);
         width:3em;
         height:3em;
+        margin: 1em 0;
+    }
+    body{
+        font-size: 12px;
     }
     
+}
+
+@media (max-width: 320px){
+    #statut_precision{
+        font-size: 8px;
+        margin-bottom: 10px !important;
+    }
 }
 /* // Medium devices (tablets, 768px and up) */
 /* @media (min-width: 768px) { ... } */
