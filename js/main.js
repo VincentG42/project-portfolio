@@ -71,7 +71,8 @@ $('#color_mode_div').on('mouseleave',() =>{
 //logo perso ///////////////////
 function logoPerso(button, color){
     button.on('click',()=>{
-    gsap.set('#logo_perso',{fill:color})
+    gsap.set('#logo_perso',{fill:color});
+    gsap.set(' #contact svg',{fill:color})
     })
 }
 
