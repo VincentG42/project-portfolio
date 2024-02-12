@@ -497,9 +497,14 @@ scale: 1;
 }
 
 @media (max-width: 320px){
-    #statut_precision{
-        font-size: 8px;
-        margin-bottom: 10px !important;
+    #statut_precision p{
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 769px) and( max-width:1024px)  {
+    #statut_precision p{
+        font-size: 12px;
     }
 }
 /* // Medium devices (tablets, 768px and up) */
