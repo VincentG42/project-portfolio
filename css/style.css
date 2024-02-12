@@ -324,21 +324,22 @@ scale: 1;
 /* === skills === */
 .card_wrapper{
     height: 85%;
-    width: 80%;
     position:relative;
+    margin-top: 2em;
+
 }
 
 .skills_card{
     height: 90%;
-    width: 80%;
+    width: 90%;
     padding: 1em;
     background-color: var(--div_color);
     overflow-y: hidden;
-    translate: 0 3em;
     box-shadow: 1px 3px 3px var(--text_color);
     position: absolute;
     border-left: 1.5em var(--div_color) solid;
     border-bottom: 0.5em var(--div_color) solid;
+    position: absolute;
 }
 
 #skills h3{
@@ -382,26 +383,20 @@ scale: 1;
 }
 
 .card_1{
-    position: absolute;
     top:0;
-    left: 15%;
 }
 
 .card_2{
-    position: absolute;
     top:3%;
-    left: 14%;
 }
 
 .card_3{
-    position: absolute;
     top:6%;
-    left: 13%;
 }
+
 .card_4{
-    position: absolute;
     top:9%;
-    left: 12%;
+
 }
 
 /* === contact === */
@@ -487,6 +482,15 @@ scale: 1;
     }
 }
 
+
+@media (max-width: 768px) {
+    #social_media svg{
+        fill: var(--text_color);
+        width:3em;
+        height:3em;
+    }
+    
+}
 /* // Medium devices (tablets, 768px and up) */
 /* @media (min-width: 768px) { ... } */
 

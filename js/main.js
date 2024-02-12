@@ -115,29 +115,26 @@ function logoPerso(button, color){
     let cards =document.querySelector('.card_wrapper');
     let next = document.querySelector('.next');
     let previous = document.querySelector('.previous');
-    console.log(cards.children);
+    // console.log(cards.children);
 
     let folioTl = gsap.timeline();
-    function animateFolioCard(element){
-        folioTl.to(element,{scale:2,opacity:0, duration: 1, ease: "power3.inOut"});
-        folioTl.to(element,{translateY:2000})
-    }
+
     index=0;
 
     next.addEventListener('click', ()=>{
         if( index < cards.children.length-1){
-            animateFolioCard(cards.children[cards.children.length-1 -index])
-            folioTl.play();
+            folioTl.to(cards.children[cards.children.length-1 -index],{scale:2,opacity:0, duration: 1, ease: "power3.out"});
+            folioTl.to(cards.children[cards.children.length-1 -index],{translateX:3000, duration:1}, "-=1")
                 index+=1;
             }
-
+            // console.log(cards.children[cards.children.length-1 -index]);
     })
 
     previous.addEventListener('click', ()=>{
         if( index > 0){
-            animateFolioCard(cards.children[cards.children.length-1 -index])
-            folioTl.reverse();
-                index -=1;
-        }
+            index -=1;
+            folioTl.to(cards.children[cards.children.length-1 -index],{translateX:0})
+            folioTl.to(cards.children[cards.children.length-1 -index],{scale:1,opacity:1, duration: 1, ease: "power3.in"},"-=1");
 
+        }
     })
