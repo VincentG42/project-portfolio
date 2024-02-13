@@ -379,8 +379,6 @@ scale: 1;
     border-radius: 5px;
 }
 
-
-
 .card_2{
     top:3%;
 }
@@ -392,7 +390,7 @@ scale: 1;
 .card_4{
     top:9%;
 }
-/*  */
+
 
 /* === contact === */
 
@@ -418,6 +416,20 @@ scale: 1;
     fill:var(--text_color);
     stroke: var(--text_color);
 }
+
+footer {
+    font-size: 12px;
+    border-top-width: 1px ;
+    border-top-style: solid;
+    border-image: linear-gradient(
+        0% var(--div_color),
+        20% var(--text_color),
+        80% var(--text_color),
+        100% var(--div_color),
+        );
+}
+
+
 
 /* === media queries === */
 
