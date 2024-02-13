@@ -352,29 +352,9 @@ scale: 1;
     width: 2em;
 }
 
-.skills_card img{
-    width: 100%;
-}
-
 .skills_card p{
     color:var(--text_color);
 
-}
-
-.skills_card .img_card_hori{
-    height: 90%;
-    width: auto;
-    translate:-60%;
-}
-
-.skills_card .img_card_hori:hover{
-    transform:translateX(60%) ;
-    transition-duration: 2s;
-}
-
-.skills_card img:hover{
-    transform:translateY(-60%) ;
-    transition-duration: 2s;
 }
 
 .skills_card svg{
@@ -390,6 +370,16 @@ scale: 1;
 .card_1{
     top:0;
 }
+.card_content a{
+    color:var(--text_color)
+}
+
+.card_img img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+
 
 .card_2{
     top:3%;
