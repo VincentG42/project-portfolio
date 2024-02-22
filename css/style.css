@@ -64,6 +64,11 @@ section{
     background-color: var(--div_color);
     margin-bottom: 3em;
     padding: 6em;
+    border-top-left-radius: 5000px 50px;
+    border-top-right-radius: 5000px 10px;
+    border-top-width: 2px ;
+    border-top-style: solid;   
+    
 }
 
 .hidden{
@@ -89,6 +94,7 @@ section{
     height: 5em;
     top:0;
     z-index:100;
+    background-color: var(--div_color);
 }
 
 /* trad button (toggle switch) */
@@ -258,9 +264,10 @@ section{
 }
 
 #statut_precision{
-        height: 8em;
-        border-radius: 3px;
-        box-shadow: 1px 3px 8px var(--element_color),1px 1px 1px var(--text_color);
+    height: 8em;
+    border-radius: 500px 15px 350px 15px/15px 350px 10px 350px;
+    border:solid 2px var(--text_color);
+    box-shadow: 10px 20px 30px -26px var(--element_color);
 }
 
 /* === about === */
@@ -279,9 +286,9 @@ position: relative;
 padding: 10px 24px;
 font-size: 18px;
 color: var(--text_color);
-border: solid var(--text_color);
-border-width: 0 1px 1px 0;
-border-radius: 5px;
+border: 1px solid var(--text_color);
+border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+box-shadow: 10px 20px 50px -20px hsla(var(--text_color),0.8);
 background-color: transparent;
 font-weight: 600;
 transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
@@ -335,11 +342,14 @@ scale: 1;
     padding: 1em;
     background-color: var(--div_color);
     overflow-y: hidden;
-    box-shadow: 1px 3px 3px var(--text_color);
     position: absolute;
-    border-left: 1.5em var(--div_color) solid;
-    border-bottom: 0.5em var(--div_color) solid;
-    position: absolute;
+    border-width: 0px 1px 1px 0px;
+    border-style: solid;
+    border-color:  var(--text_color);
+    border-radius: 5px 15px 500px 5px/5px 3px 15px 5px;
+    box-shadow: 12px 20px 15px -20px var(--text_color);
+        
+    
 }
 
 #skills h3{
@@ -394,6 +404,7 @@ scale: 1;
 
 /* === contact === */
 
+
 #contact a{
     color: var(--text_color)
 }
@@ -418,15 +429,12 @@ scale: 1;
 }
 
 footer {
+    border-top-left-radius: 5000px 50px;
+    border-top-right-radius: 5000px 10px;
+    
     font-size: 12px;
-    border-top-width: 1px ;
-    border-top-style: solid;
-    border-image: linear-gradient(
-        0% var(--div_color),
-        20% var(--text_color),
-        80% var(--text_color),
-        100% var(--div_color),
-        );
+    border-top-width: 2px ;
+    border-top-style: solid;    
 }
 
 

@@ -123,8 +123,10 @@ function logoPerso(button, color){
 
     next.addEventListener('click', ()=>{
         if( index < cards.children.length-1){
-            folioTl.to(cards.children[cards.children.length-1 -index],{scale:2,opacity:0, duration: 1, ease: "power3.out"});
-            folioTl.to(cards.children[cards.children.length-1 -index],{translateX:3000, duration:1}, "-=1")
+            folioTl.to(cards.children[cards.children.length-1 -index],{scale:1.5, duration: 1, ease: "power3.out"});
+            folioTl.to(cards.children[cards.children.length-1 -index],{translateX:-3000,duration:1}, "-=1");
+            folioTl.to(cards.children[cards.children.length-1 -index],{skewY:30,duration:1.5}, "-=1");
+            folioTl.to(cards.children[cards.children.length-1 -index],{opacity:0,duration:0.5}, "-=0.8")
                 index+=1;
             }
             // console.log(cards.children[cards.children.length-1 -index]);
@@ -133,7 +135,7 @@ function logoPerso(button, color){
     previous.addEventListener('click', ()=>{
         if( index > 0){
             index -=1;
-            folioTl.to(cards.children[cards.children.length-1 -index],{translateX:0})
+            folioTl.to(cards.children[cards.children.length-1 -index],{translateX:0, skewY:0})
             folioTl.to(cards.children[cards.children.length-1 -index],{scale:1,opacity:1, duration: 1, ease: "power3.in"},"-=1");
 
         }
